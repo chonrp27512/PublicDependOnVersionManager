@@ -1,0 +1,2 @@
+# PublicDependOnVersionManager
+公共依赖版本管理
