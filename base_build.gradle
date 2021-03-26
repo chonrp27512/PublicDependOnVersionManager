@@ -1,5 +1,5 @@
 //apply from: "../script/config.gradle"
-apply from: "https://gist.githubusercontent.com/chonrp27512/05f450aa192d363c8205b4bd914cae71/raw/4e019dbadce41bc394ef135908c90a8b9a8bf99c/config.gradle"
+apply from: "https://raw.githubusercontent.com/chonrp27512/PublicDependOnVersionManager/main/config.gradle"
 
 
 apply plugin: 'kotlin-android'

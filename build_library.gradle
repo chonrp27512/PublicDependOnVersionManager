@@ -5,8 +5,7 @@
  */
 apply plugin: 'com.android.library'
 
-//apply from: "../script/base_build.gradle"
-apply from: "https://gist.githubusercontent.com/chonrp27512/c5591c56b46702e82c905d31858c972d/raw/dc09edb00dd05c22977acaf3bea9f54940ff4714/base_build.gradle"
+apply from: "https://raw.githubusercontent.com/chonrp27512/PublicDependOnVersionManager/main/base_build.gradle"
 
 
 // 更新 build.gradle, 添加参数 AROUTER_GENERATE_DOC = enable
