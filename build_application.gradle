@@ -1,0 +1,18 @@
+/**
+ *
+ * 这里是作为测试module能力的app，使用的公共依赖脚本
+ *
+ */
+apply plugin: 'com.android.application'
+//apply from: "../script/base_build.gradle"
+apply from: "https://gist.githubusercontent.com/chonrp27512/c5591c56b46702e82c905d31858c972d/raw/dc09edb00dd05c22977acaf3bea9f54940ff4714/base_build.gradle"
+
+
+android {
+
+}
+
+dependencies {
+    //todo("等common等一些公共的module搞完上传到maven后，把依赖地址放这")
+
+}

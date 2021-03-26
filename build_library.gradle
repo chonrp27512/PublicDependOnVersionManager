@@ -1,0 +1,28 @@
+/**
+ *
+ * 这里是作为library上传到maven使用的公共依赖脚本
+ *
+ */
+apply plugin: 'com.android.library'
+
+//apply from: "../script/base_build.gradle"
+apply from: "https://gist.githubusercontent.com/chonrp27512/c5591c56b46702e82c905d31858c972d/raw/dc09edb00dd05c22977acaf3bea9f54940ff4714/base_build.gradle"
+
+
+// 更新 build.gradle, 添加参数 AROUTER_GENERATE_DOC = enable
+// 生成的文档路径 : build/generated/source/apt/(debug or release)/com/alibaba/android/arouter/docs/arouter-map-of-${moduleName}.json
+kapt {
+    arguments {
+        arg("AROUTER_MODULE_NAME", project.getName())
+        arg("AROUTER_GENERATE_DOC", dependenceConfig.arouter_generate_doc)
+    }
+}
+
+android {
+
+}
+
+dependencies {
+    kapt dependenceConfig.deps.router.arouter_compiler
+    implementation dependenceConfig.deps.router.arouter_api
+}

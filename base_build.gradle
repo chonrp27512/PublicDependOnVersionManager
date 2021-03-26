@@ -1,0 +1,50 @@
+//apply from: "../script/config.gradle"
+apply from: "https://gist.githubusercontent.com/chonrp27512/05f450aa192d363c8205b4bd914cae71/raw/4e019dbadce41bc394ef135908c90a8b9a8bf99c/config.gradle"
+
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-parcelize'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion dependenceConfig.compileSdkVersion
+    buildToolsVersion dependenceConfig.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion dependenceConfig.minSdkVersion
+        targetSdkVersion dependenceConfig.targetSdkVersion
+        versionCode 1
+        versionName "1.0.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildFeatures {
+        viewBinding true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility dependenceConfig.java_version
+        targetCompatibility dependenceConfig.java_version
+    }
+    kotlinOptions {
+        jvmTarget = dependenceConfig.jvmTarget
+    }
+
+}
+
+dependencies {
+    testImplementation dependenceConfig.deps.test.junit
+    androidTestImplementation dependenceConfig.deps.test.androidx_junit
+    androidTestImplementation dependenceConfig.deps.test.espresso_core
+
+    implementation dependenceConfig.deps.android.kotlin_stdlib
+    implementation dependenceConfig.deps.android.androidx_core_ktx
+    implementation dependenceConfig.deps.android.appcompat
+    implementation dependenceConfig.deps.android.material
+    implementation dependenceConfig.deps.android.constraintlayout
+}
