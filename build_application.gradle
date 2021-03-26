@@ -10,7 +10,7 @@ apply from: "https://raw.githubusercontent.com/chonrp27512/PublicDependOnVersion
 android {
     signingConfigs {
         release {
-            storeFile file("https://github.com/chonrp27512/PublicDependOnVersionManager/blob/f3b0d5adfdb1c5969b48353f9e6cbbb8755f8781/debug")
+            storeFile file("https://raw.githubusercontent.com/chonrp27512/PublicDependOnVersionManager/main/debug")
             storePassword "123456"
             keyAlias "debug"
             keyPassword "123456"
