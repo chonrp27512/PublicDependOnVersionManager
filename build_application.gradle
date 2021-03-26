@@ -16,6 +16,11 @@ android {
             keyPassword "123456"
         }
     }
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+        }
+    }
 }
 
 dependencies {
