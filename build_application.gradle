@@ -8,7 +8,14 @@ apply from: "https://raw.githubusercontent.com/chonrp27512/PublicDependOnVersion
 
 
 android {
-
+    signingConfigs {
+        release {
+            storeFile file("../debug")
+            storePassword "123456"
+            keyAlias "debug"
+            keyPassword "123456"
+        }
+    }
 }
 
 dependencies {
