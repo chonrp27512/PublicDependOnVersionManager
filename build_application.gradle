@@ -9,8 +9,8 @@ apply from: "https://raw.githubusercontent.com/chonrp27512/PublicDependOnVersion
 
 android {
     signingConfigs {
-        release {
-            storeFile file(url: "https://raw.githubusercontent.com/chonrp27512/PublicDependOnVersionManager/main/debug.keystore")
+        module_release {
+            storeFile file("../module.keystore")
             storePassword "123456"
             keyAlias "debug"
             keyPassword "123456"
@@ -18,7 +18,7 @@ android {
     }
     buildTypes {
         release {
-            signingConfig signingConfigs.release
+            signingConfig signingConfigs.module_release
         }
     }
 }
