@@ -22,3 +22,9 @@
 
 
     各个库版本的管理
+
+## 关于signingConfigs下签名文件放置问题
+
+    
+    各个项目下放一个module.keystore签名文件即可，其他已经在配置文件中配好。
+    密码统一123456，Alias为debug
